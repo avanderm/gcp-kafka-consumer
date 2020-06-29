@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package org.example;
+
+option java_multiple_files = true;
+option java_outer_classname = "ProtoTestMessageDescriptors";
+option java_package = "org.example";
+
+message ProtoTestMessage {
+  PK key = 1;
+
+  string name = 2;
+  uint32 rank = 3;
+
+  message PK {
+    uint32 id = 1;
+  }
+}
